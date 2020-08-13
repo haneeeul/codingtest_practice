@@ -13,7 +13,8 @@ int solution(int n, vector<int> weak, vector<int> dist) {
     int answer = -1;
 
     // next_permutation() 사용을 위해 미리 내림차순 정렬
-    sort(dist.begin(), dist.end(), desc); // 프로그래머스: greater<>() 오류
+    //sort(dist.begin(), dist.end(), desc); // 프로그래머스: greater<>() 오류
+    sort(dist.begin(), dist.end()) // ascending order also work
 
     for (int i = 0; i < weak.size(); i++) {
         
