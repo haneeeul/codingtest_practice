@@ -26,7 +26,7 @@ int main(int argc, char** argv)
             }
         }
 
-        // like decalcomanie!
+        // 세로검사를 위해 눕혀서 다시 저장 (8 ~ 15)
         for (int i = 0; i < 8; ++i) {
             for (int j = 0; j < 8; ++j) {
                 board[8 + i][j] = board[j][i];
@@ -49,7 +49,7 @@ int find_palindrome(const vector<vector<char> > &board, int length) {
     int count = 0;
     
     // compare to both end-side of string
-    for (int i = 0; i < 16; ++i) {
+    for (int i = 0; i < 16; ++i) { // 0 ~ 7 : 가로 검사 , 8 ~ 15 : 세로 검사
         for (int j = 0; j < 8; ++j) {
             if (j + (length - 1) > 7) break; // check boundary
 
