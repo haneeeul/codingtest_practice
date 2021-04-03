@@ -7,16 +7,16 @@
 #### 문제 출처
 *************
 
+1. 백준 알고리즘
 www.acmicpc.net
-백준 알고리즘
 
+2. 프로그래머스
 https://programmers.co.kr/learn/challenges
-프로그래머스
 
-
+  
+  - kakao_2020 (2020 KAKAO BLIND RECRUITMENT)
   https://programmers.co.kr/learn/challenges?tab=all_challenges
-  kakao_2020 (2020 KAKAO BLIND RECRUITMENT)
+  
 
-
+3. SW Expert Academy
 https://swexpertacademy.com
-SW Expert Academy
