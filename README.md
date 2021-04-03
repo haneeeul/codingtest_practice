@@ -13,5 +13,8 @@ www.acmicpc.net
 https://programmers.co.kr/learn/challenges
 프로그래머스
 
+  kakao_2020 (2020 KAKAO BLIND RECRUITMENT)
+  https://programmers.co.kr/learn/challenges?tab=all_challenges
+
 https://swexpertacademy.com
 SW Expert Academy
