@@ -14,7 +14,7 @@ www.acmicpc.net
 https://programmers.co.kr/learn/challenges
 
   
-  - kakao_2020 (2020 KAKAO BLIND RECRUITMENT)
+  - kakao_2020 (2020 KAKAO BLIND RECRUITMENT)<br>
   https://programmers.co.kr/learn/challenges?tab=all_challenges
   
 
