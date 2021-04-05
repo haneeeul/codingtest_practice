@@ -1,0 +1,34 @@
+-- NAME -> ANIMAL_NAME
+-- DATETIME -> DATE_TIME
+
+-- IF() 사용
+/*
+SELECT ANIMAL_TYPE, IF (ISNULL(ANIMAL_NAME), 'No name', ANIMAL_NAME) AS ANIMAL_NAME, SEX_UPON_INTAKE
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID ASC;
+*/
+
+-- IFNULL() 사용
+/*
+SELECT ANIMAL_TYPE, IFNULL(ANIMAL_NAME, 'No name') AS ANIMAL_NAME, SEX_UPON_INTAKE
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID ASC;
+*/
+
+-- coalesce() 사용: coalesce(col1, col2, col3) 중 처음으로 null 이 아닌 값을 반환한다.
+-- 따라서 coalesce(NAME, 'No name') 중에서 NAME 이 null 인 경우, 그 다음 값인 No name 으로 넘어간다.
+/*
+SELECT ANIMAL_TYPE, COALESCE(ANIMAL_NAME, 'No name') AS ANIMAL_NAME, SEX_UPON_INTAKE
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID ASC;
+*/
+
+-- CASE 사용
+SELECT ANIMAL_TYPE,
+        CASE
+            WHEN ANIMAL_NAME IS NULL 
+                THEN 'No name' 
+            else ANIMAL_NAME 
+        END AS ANIMAL_NAME,
+        SEX_UPON_INTAKE
+FROM ANIMAL_INS;
