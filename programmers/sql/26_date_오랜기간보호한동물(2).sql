@@ -1,0 +1,15 @@
+SELECT ANIMAL_OUTS.ANIMAL_ID AS ANIMAL_ID, ANIMAL_OUTS.NAME AS NAME
+FROM ANIMAL_INS RIGHT OUTER JOIN ANIMAL_OUTS
+    USING(ANIMAL_ID)
+ORDER BY ANIMAL_OUTS.DATE_TIME - ANIMAL_INS.DATE_TIME DESC
+LIMIT 2;
+
+-- mysql 에서 두 날짜간의 차이를 가져오고 싶을 때
+-- datediff() : 단순 일 차이를 가져오고 싶을 때
+-- timestampdiff() : 차이를 연, 분기, 월, 주, 일, 시, 분, 초로 지정하여 갖고 오고 싶을 때
+-- timestampdiff() 함수 사용
+SELECT ANIMAL_OUTS.ANIMAL_ID, ANIMAL_OUTS.ANIMAL_NAME
+FROM ANIMAL_OUTS INNER JOIN ANIMAL_INS
+    USING(ANIMAL_ID)
+ORDER BY timestampdiff(minute, ANIMAL_INS.DATE_TIME, ANIMAL_OUTS.DATE_TIME) desc
+LIMIT 2;
