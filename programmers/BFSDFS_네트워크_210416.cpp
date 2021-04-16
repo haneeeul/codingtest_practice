@@ -7,12 +7,14 @@ using namespace std;
 
 int visited[200];
 void BFS(int start, int n, vector<vector<int>>& board);
+void DFS(int start, int n, vector<vector<int>>& board);
 
 int solution(int n, vector<vector<int>> computers) {
     int answer = 0;
     for (int i = 0; i < n; ++i) {
         if (visited[i] == 0) {
-            BFS(i, n, computers);
+	    //BFS(i, n, computers);
+	    DFS(i, n, computers);
             answer += 1;
         }
     }
@@ -34,5 +36,16 @@ void BFS(int start, int n, vector<vector<int>>& board) {
         }
     }
 
+    return;
+}
+
+void DFS(int start, int n, vector<vector<int>> &board) {
+    visited[start] = 1;
+    for (int i = 0; i < n; i++) {
+        if (board[start][i] == 1 && visited[i] == 0) {
+            visited[i] = 1;
+            DFS(i, n, board);
+        }
+    }
     return;
 }
