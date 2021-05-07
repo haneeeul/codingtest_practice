@@ -136,7 +136,7 @@ int main(void) {
     cin.tie(0);
 
     cin >> N >> M >> D;
-
+    // input
     map.assign(N + 1, vector<int>(M , 0));
     origin.assign(N + 1, vector<int>(M , 0));
 
